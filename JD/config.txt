@@ -1,0 +1,67 @@
+[MySQL]
+mysqlserver = 10.41.23.203
+mysqluser = Jonny
+mysqlport = 3306
+mysqlpassword = 1q2w3e4r
+database = Ecommerce
+charset = utf8
+
+[MONGODB]
+host = 10.41.23.203
+port = 27017
+
+[LOG]
+path = ./log/reviews.log
+
+[JD-Dell]
+name = 京东
+Account = Rosa
+website = https://item.jd.com/
+keywords = P2217/P2317H/P2418HT/P2717H/S2418H/S2418HN/S2718D/S2817Q/U2417H/U2717D/U2917W/UP3017/UP3218K/C5518QT/C8618QT/UP2718Q/U2518D/U2518DR/P2319H/P2719H/S2419HM/S2719DM/P2719HC/S2319HS/S2719HS/S2719DC/U2419H/U2419HC/U2719D/U2719DC/U2719DX
+
+[JD-HP]
+name = 京东
+Account = Astro
+website = https://item.jd.com/
+keywords = Pavillion27q/27q/S340c/Envy 34/Z27/Z32/Z43/V220
+
+[JD-Lenovo]
+name = 京东
+Account = Lily
+website = https://item.jd.com/
+keywords = T2324C/P24i-1/T24i-10/T24m-10/L20-10/P32u-10/T2054pc/T2254pc/LT2423wc
+
+
+[JD-ViewSonic]
+name = 京东
+Account = Rainbow
+website = https://item.jd.com/
+keywords = VP2468/VP2768/VP3881/VP2771/VP2785/VG2448/TD2220/TD2420/VX2778-SMHD
+
+[amazon-Dell]
+name = amazon
+Account = Rosa
+website = https://www.amazon.com/
+keywords = P2217/P2317H/P2418HT/P2717H/S2418H/S2418HN/S2718D/S2817Q/U2417H/U2717D/U2917W/UP3017/UP3218K/C5518QT/C8618QT/UP2718Q/U2518D/U2518DR/P2319H/P2719H/S2419HM/S2719DM/P2719HC/S2319HS/S2719HS/S2719DC/U2419H/U2419HC/U2719D/U2719DC/U2719DX
+
+[amazon-HP]
+name = amazon
+Account = Astro
+website = https://www.amazon.com/
+keywords = Pavillion27q/27q/S340c/Envy 34/Z27/Z32/Z43/V220
+
+[amazon-Lenovo]
+name = amazon
+Account = Lily
+website = https://www.amazon.com/
+keywords = T2324C/P24i-1/T24i-10/T24m-10/L20-10/P32u-10/T2054pc/T2254pc/LT2423wc
+
+[amazon-ViewSonic]
+name = amazon
+Account = Rainbow
+website = https://www.amazon.com/
+keywords = VP2468/VP2768/VP3881/VP2771/VP2785/VG2448/TD2220/TD2420/VX2778-SMHD
+
+
+
+
