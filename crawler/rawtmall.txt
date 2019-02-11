@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="data-spm" content="1" />
+        <title>security-X5</title>
+        <script src="//g.alicdn.com/kissy/k/1.4.1/seed-min.js?t=20140212">
+        </script>
+        <link rel="stylesheet" type="text/css" href="//g.alicdn.com/tb/err/0.8.0/err/40x/index-min.css"
+        />
+    </head>
+    
+    <body><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=133446795745&aplus&yunid=&e0354eb3497b5&asid=AeGBDBJkRxdc04zyaAAAAACBYJyfhTiRGg==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+        <div id="page">
+            <div id="content">
+                <div id="J_Header" class="header clearfix">
+                    <h1 id="logo" class="logo">
+                        <a href="//www.taobao.com/" title="淘宝网 Taobao.com - 阿里巴巴旗下网站" target="_top">
+                            淘宝网
+                            <span>
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+                <div id="main">
+                    <div id="banner" style="margin-right:0px">
+                        <a id="J_Banner">
+                            <img src="//gtms02.alicdn.com/tps/i2/T1zL8ZFqFgXXaESgf7-520-500.png" />
+                        </a>
+                    </div>
+                    <div id="err" data-spm="1997481305" style="width:350px">
+                        <div class="tips" style="font-size:23px">
+                            <p>
+                                亲，小二正忙，滑动一下马上回来
+                            </p>
+                            <p>
+
+                            </p>
+                        </div>
+                        <div class="reason">
+                            <script>
+    var loadScript = function (src, callback) {
+        var script = document.createElement('script'),
+            head = document.getElementsByTagName('head')[0];
+        script.type = 'text/javascript';
+        script.charset = 'UTF-8';
+        script.src = src;
+        if (script.addEventListener) {
+            script.addEventListener('load',
+                function () {
+                    callback();
+                },
+                false);
+        } else if (script.attachEvent) {
+            script.attachEvent('onreadystatechange',
+                function () {
+                    var target = window.event.srcElement;
+                    if (target.readyState == 'loaded') {
+                        callback();
+                    }
+                });
+        }
+        head.appendChild(script);
+    };
+    var scene = "";
+    if (navigator.userAgent.match(/.*(iPhone|iPad|Android|ios|SymbianOS|Windows Phone).*/i)) {
+        scene = "register_h5";
+        loadScript('//g.alicdn.com/sd/nch5/index.js', ncinit);
+    } else {
+        scene = "register";
+        loadScript('//g.alicdn.com/sd/ncpc/nc.js', ncinitpc);
+    }
+    function ncinitpc() {
+        UA_Opt.Flag = 880846;
+        document.getElementById("nocaptcha").style.cssText = "margin-top:-10px";
+        noCaptcha({
+            renderTo: "#nocaptcha",
+            appkey: "X82Y",
+            token: "923486941c55142e9c9b5e5e4eb63f2c",
+            scene: scene,
+            is_Opt: 1,
+            callback: function (data) {
+                document.getElementById("nc-session-id").value = data.csessionid;
+                document.getElementById("nc-sig").value = data.sig;
+                document.getElementById("nc-verify-form").submit();
+            }
+        });
+    }
+    function ncinit() {
+        UA_Opt.Flag = 880846;
+        NoCaptcha.init({
+            renderTo: "#nocaptcha",
+            appkey: "X82Y",
+            token: "923486941c55142e9c9b5e5e4eb63f2c",
+            scene: scene,
+            is_Opt: 1,
+            callback: function (data) {
+                document.getElementById("nc-session-id").value = data.csessionid;
+                document.getElementById("nc-sig").value = data.sig;
+                document.getElementById("nc-verify-form").submit();
+            }
+        });
+        NoCaptcha.setEnabled(true);
+    }
+</script>
+<center>
+    <div id="nocaptcha" style="margin-top:20px">
+    </div>
+</center>
+<form id="nc-verify-form" action="//list.tmall.com:443/search_product.htm/_____tmd_____/verify/" method="GET">
+    <input name="nc_token" value="923486941c55142e9c9b5e5e4eb63f2c" type="hidden">
+    <input name="nc_session_id" id="nc-session-id" value="" type="hidden">
+    <input name="nc_sig" id="nc-sig" value="" type="hidden">
+    <input name="x5secdata" id="x5secdata" type="hidden" value="5e0c8e1365474455070961b803bd560607b52cabf5960afff39b64ce58073f78d979de2416369c06d4b7baf6310e2ef30671c8216f91c1f6e0a65efa715453c30480def1935cf7544236ad19f2057552faa04c5a4741d78a3444916b235ae29cba45bd36bb8e49de97f26cfdecdbf94813383345eb8bce123342d5345caedead7167e21c792f77535a9cc5c0b7bd69668459121f7625db100ccdaafe7bacc7d39151a8d84198da666169f9a2da46cdf931476126143b3005ccfd4a6b62b7d4cc166d5e4ccbf77620408fc3aaae563899ba3cda3ff8453ae2a4c41ae410de1c4b9d719da1a317f726775247a5f601a358a3b3e7b92e7a104a939356775160b150285f7d2a6c046bf809a424f9e3e418c04b268da52c7e9ae6d02e5c6722b21f00f2f18e6756705a2756b39ff629e9fab094c8bf63f830a5bbf7e4461239287b5053326370b6ad2ba422bf38f31ead2b70c3e7e40f0b2c7b35ed3b19076988d50b72fccb6b7ede6ea1fbbeed8a85d6059731f24f2f4479bde52794e91045cff3a9a3aa048eb023140a5bd618541737da86101e64d09dea7b458c6df6a77677aacc87125fa3687e79bb7af3ec8749a786e0eee63a71401cb6c89f46c02a38569121d305e79ca6de5755f0f49156de12be70354ab06a80272b509efdc25b22fe279e1149ae8e03fac1bb2fd9b03377b204170cbda7edb35c6e40711f739abf44d07a58ac71ffe1d1ee455bfb719787171656568581702545b0da2fca02da8ddf238f7e35e29e895dd5559881ed86fa34fa7b">
+    <input name="x5step" id="x5step" type="hidden" value="100">
+</form>
+</script>
+<script>
+    if (window.location.host == "world.taobao.com") {
+        document.getElementById("nc-verify-form").action = document.getElementById("nc-verify-form").action.replace("buy.taobao.com", "world.taobao.com/buy");
+    }
+    if (window.location.host == "tw.taobao.com") {
+        document.getElementById("nc-verify-form").action = document.getElementById("nc-verify-form").action.replace("buy.taobao.com", "tw.taobao.com/buy");
+    }
+</script>
+                            <br />
+                            562741885094b48c733a728c050e46b0
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+        <script>
+            KISSY.config({
+                packages: {
+                    err: {
+                        base: '//g.alicdn.com/tb/err/0.8.0/'
+                    }
+                }
+            }),
+            KISSY.use('err/40x/index',
+            function(e, i) {
+                i.init()
+            });
+        </script>
+ <script>
+var referrer=document.referrer;
+if (referrer && referrer.indexOf("__tmd__")===-1 ){
+  //如果包含 referrer ，且 referrer 非 霸下验证页面
+    localStorage.x5referer = document.referrer;
+}else{
+    localStorage.x5referer = window.location.href;
+}
+</script> 
+        <div id="footer">
+            <span class="g_foot-line">
+            </span>
+        </div>
+        <div id="server-num">
+        </div>
+    <script type="text/javascript">(function(e){if(!e["_med"])e["_med"]={};var t=e["_med"];t.cookie=function(e,t,a){if(t!==undefined){a=a||{};if(typeof a.expires==="number"){var o=a.expires,l=a.expires=new Date;l.setTime(+l+o*864e5)}return document.cookie=[e,"=",String(t),a.expires?"; expires="+a.expires.toUTCString():"",a.path?"; path="+a.path:"",a.domain?"; domain="+a.domain:"",a.secure?"; secure":""].join("")}var r=e?undefined:{};var i=document.cookie?document.cookie.split("; "):[];for(var n=0,s=i.length;n<s;n++){var b=i[n].split("=");var d=b.shift();var p=b.join("=");if(e&&e===d){r=p;break}if(!e&&p!==undefined){r[d]=p}}return r};var a=document;var o=e.devicePixelRatio||1,l=a.documentElement.clientWidth,r=a.documentElement.clientHeight,i,n,s,b=/initial-scale=([\d\.]+?),/i,d,p;if(a.querySelector){p=a.querySelector('meta[name="viewport"]');if(p){d=b.exec(p.content+",");if(d){s=parseFloat(d[1],10)}}}if(s){l=l*s;r=r*s}if(screen){if(Math.abs(screen.width-l*o)<.2*screen.width){l=screen.width/o;r=screen.height/o;i=screen.width;n=screen.height}else{l=screen.width;r=screen.height;i=screen.width*o;n=screen.height*o}}else{i=l*o;n=r*o}var m="createTouch"in a&&"ontouchstart"in e?1:0;var c=["dw:"+l,"dh:"+r,"pw:"+i,"ph:"+n,"ist:"+m].join("&");t.cookie("_med",c,{expires:3650})})(window);</script></body>
+
+</html>
