@@ -10,7 +10,7 @@ from datetime import datetime,timedelta
 
 from pyquery import PyQuery as pq
 
-from pipelines3 import MongodbPipeline,MysqlPipeline
+#from pipelines3 import MongodbPipeline,MysqlPipeline
 
 import hashlib
 
@@ -20,7 +20,8 @@ from loglib import logging
 
 import redis
 
-dbredis = redis.Redis(host="10.41.75.56",port=6379,db=2)
+dbredis = redis.Redis(host='reviews.ful.cc')
+from Proxy import get_one_proxy
 
 # 获取config
 config = configparser.RawConfigParser()
@@ -69,7 +70,7 @@ class reviews(object):
 	def __init__(self,goodsname='Dell',keyword='P2317H',client='Rosa',tag = None,debug=False):
 		self.debug = debug
 		self.tag = tag
-		self.dbmysql = MysqlPipeline()
+		#self.dbmysql = MysqlPipeline()
 		self.client = client
 		self.goodsname = goodsname
 		self.keyword = self.goodsname + ' ' +keyword
@@ -82,9 +83,10 @@ class reviews(object):
 		self.prefix1 = 'Summary_' 
 		self.prefix2 = 'Main_' #第一层json的值
 		
+		proxy = get_one_proxy()
 		self.proxy = {
-			'http':'10.41.65.25:1080',
-			'https':'10.41.65.25:1080'
+			'http':proxy,
+			'https':proxy
 			}
 		self.keyword2 = keyword #用来匹配
 		self.pattern = r'\/(\d+?)\.html' #从url中获取goodid
@@ -157,7 +159,12 @@ class reviews(object):
 		}
 		# print('测试') #测试时候使
 		try:
-			resp = requests.get(url2,params=data2,headers=headers,proxies=self.proxy)
+			proxy = get_one_proxy()
+			proxies = {
+				'http':proxy,
+				'https':proxy
+				}
+			resp = requests.get(url2,params=data2,headers=headers,proxies=proxies)
 		except Exception as e:
 			logging.error('Fatal error:'+url2+'downloaded fail')
 			return
@@ -281,7 +288,12 @@ class reviews(object):
 		 
 		 }
 		try:
-			resp = requests.get(url,params=data,headers=self.headers,proxies=self.proxy)
+			proxy = get_one_proxy()
+			proxies = {
+				'http':proxy,
+				'https':proxy
+				}
+			resp = requests.get(url,params=data,headers=self.headers,proxies=proxies)
 		except Exception as e:
 			print('{}'.format(e))
 			logging.error('Fatal error:'+url+'downloaded fail')
@@ -404,13 +416,14 @@ class reviews(object):
 		if self.lock == False:
 			sql = 'delete from {} where type = "{}" and website = "JD"'.format('amazon_Reviews_clean',self.keyword)
 			print(sql)
-			self.dbmysql.run(sql)
+			#self.dbmysql.run(sql)
 			
 	def down(self,callback=None):
 		if callback is None:
 			callback = self.download_dell
 		for i in range(len(goods_list)):
 			goodsname = goods_list[i]
+			print(goodsname)
 			customer = customer_goods.get(goodsname)
 			url = url_list[i]
 			keywordslist = customer_keyword_list[i]
@@ -419,6 +432,9 @@ class reviews(object):
 	def download_dell(self,url,keywordslist,callback=None):
 		if callback is None:
 			callback = self.dell_store
+		
+		proxy = get_one_proxy()
+		print(proxy)
 		resp = requests.get(url,headers=self.headers,proxies=self.proxy)
 		return callback(resp.text,keywordslist = keywordslist)
 		
@@ -468,7 +484,8 @@ class reviews(object):
 			self.parse_comment(goodid = goodid,keyword=keyword,goodsname=goodsname)
 		pass
 if __name__ == "__main__":
-	test = reviews(debug=False)
+	print('okay')
+	test = reviews(debug=True)
 	url = 'http://list.jd.com/list.html?cat=670,677,688&ev=exbrand_5821&page=1&sort=sort_commentcount_desc&trans=1&JL=6_0_0#J_main'
 	test.down() #下载店铺信息
 	#test.consumer()
